@@ -1,0 +1,427 @@
+{
+    "_comment": "Use a Service Provider login/password, not a Top-Level",
+    "_comment2": "Be careful when changing the values below in this file",
+    "_comment3": "Make sure user logins are unique, otherwise creation will fail",
+    "_comment4": "Make sure your Service Provider assign IPTC automatically, otherwise you'll have to do it manually",
+    
+    "admin_cred": {
+        "url": "https://<your_path_to_mytelephony_here>/restletrouter",
+        "login": "<your_service_provider_admin_login_here>",
+        "password": "<your_service_provider_admin_login_here>",
+        "domain": "<your_service_provider_domain_name_here>"
+    },
+    "enterprise_payload": {
+        "fullName": "Enterprise00",
+        "maxIVRConnections": "10",
+        "languages": [
+            "en"
+        ],
+        "countryCode": "33",
+        "limitation": "None",
+        "operatorPrefix": "0",
+        "internalDialplan": [
+            {
+                "startsBy": "2",
+                "length": "3"
+            },
+            {
+                "startsBy": "3",
+                "length": "3"
+            },
+            {
+                "startsBy": "4",
+                "length": "3"
+            },
+            {
+                "startsBy": "5",
+                "length": "3"
+            },
+            {
+                "startsBy": "6",
+                "length": "3"
+            },
+            {
+                "startsBy": "7",
+                "length": "3"
+            },
+            {
+                "startsBy": "8",
+                "length": "3"
+            }
+        ]
+    },
+    "site_payload": [
+        {
+            "name": "Paris"
+        },
+        {
+            "name": "Rome"
+        },
+        {
+            "name": "London"
+        }
+    ],
+    "device_payload": {
+        "label": "Yealink T48s",
+        "macAddress": "001122334455",
+        "deviceModel": "v1/telephony/Enterprise/15035404748890927/DeviceModel/185"
+    },
+    "pstn_range": {
+        "label": "Lucas_SDA",
+        "rangeStart": "+33010203101",
+        "rangeEnd": "+33010203110",
+        "ownerAdmtiveDomain": "v1/telephony/AdmtiveDomainSpecific/0.270.258.",
+        "countryCode": "33"
+    },
+    "pilot_nb_payload": {
+        "pilotNumber": "+33999999900",
+        "receptionist": "201"
+    },
+    "user_payload": [
+        {
+            "iUser": {
+                "firstName": "User",
+                "lastName": "201",
+                "mobileNumber": "0695847414",
+                "emails": "login1@longemail.com",
+                "login": "login1@longemail.com",
+                "password": "90201"
+            },
+            "addressNumber": "201"
+        },
+        {
+            "iUser": {
+                "firstName": "User",
+                "lastName": "202",
+                "mobileNumber": "0695847415",
+                "emails": "login2@longemail.com",
+                "login": "login2@longemail.com",
+                "password": "90202"
+            },
+            "addressNumber": "202"
+        },
+        {
+            "iUser": {
+                "firstName": "User",
+                "lastName": "203",
+                "mobileNumber": "0695847416",
+                "emails": "login3@longemail.com",
+                "login": "login3@longemail.com",
+                "password": "90203"
+            },
+            "addressNumber": "203"
+        }
+    ],
+    "admin_payload": {
+        "hasMyTelephonyAccess": true,
+        "login": "mylogin",
+        "email": "myemail@email.com",
+        "password": "acomplexpass2020",
+        "firstName": "myFirstName",
+        "lastName": "myLastName",
+        "appLanguage": "en"
+    },
+    "department_payload": [
+        {
+            "name": "Support"
+        },
+        {
+            "name": "Sales"
+        },
+        {
+            "name": "Test"
+        },
+        {
+            "name": "Management"
+        }
+    ],
+    "sub_department_payload": [
+        {
+            "name": "DE",
+            "ownerDepartment": ""
+        },
+        {
+            "name": "EN",
+            "ownerDepartment": ""
+        },
+        {
+            "name": "FR",
+            "ownerDepartment": ""
+        },
+        {
+            "name": "UK",
+            "ownerDepartment": ""
+        }
+    ],
+    "group_payload": [
+        {
+            "addressNumber": "301",
+            "isVoiceMailNoMessage": "true",
+            "label": "Group 301",
+            "ringPattern": "cyclic"
+        },
+        {
+            "addressNumber": "302",
+            "allowMembersEditFwd": "true",
+            "isVoiceMailNoMessage": "true",
+            "label": "Group 302",
+            "ringPattern": "unisson"
+        },
+        {
+            "addressNumber": "303",
+            "allowMembersEditFwd": "true",
+            "isVoiceMailNoMessage": "true",
+            "label": "Group 303",
+            "ringPattern": "oldestIdle"
+        }
+    ],
+    "group_members": {
+        "members": [
+            {
+                "restUri": ""
+            },
+            {
+                "restUri": ""
+            },
+            {
+                "restUri": ""
+            }
+        ]
+    },
+    "voicemail_payload": {
+        "label": "Voicemail",
+        "addressNumber": "555",
+        "isDefaultByServiceType": "true"
+    },
+    "conference_payload": {
+        "label": "Conference",
+        "addressNumber": "559",
+        "ivrName": "Conference",
+        "alias": "IVRService"
+    },
+    "fwd_na_payload": {
+        "label": "NoAnswer",
+        "forwardType": "NA",
+        "filter": "A",
+        "destination": "ENT_VM",
+        "noAnswerForwardingDelay": "30000",
+        "allowDisableOnChildren": "true",
+        "applyToGroup": "false",
+        "activated": "true"
+    },
+    "fwd_bu_payload": {
+        "label": "OnBusy",
+        "forwardType": "OB",
+        "filter": "A",
+        "destination": "ENT_VM",
+        "noAnswerForwardingDelay": "5000",
+        "applyToGroup": "false",
+        "allowDisableOnChildren": "true",
+        "activated": "true"
+    },
+    "fwd_unr_payload": {
+        "label": "OnUnreachable",
+        "forwardType": "UR",
+        "filter": "A",
+        "destination": "ENT_VM",
+        "noAnswerForwardingDelay": "5000",
+        "applyToGroup": "false",
+        "allowDisableOnChildren": "false",
+        "activated": "true"
+    },
+    "acd_payload": [
+        {
+            "addressNumber": "500",
+            "allowMembersEditFwd": "true",
+            "label": "ACD Group 500",
+            "ringPattern": "oldestIdle"
+        },
+        {
+            "addressNumber": "501",
+            "allowMembersEditFwd": "true",
+            "label": "ACD Group 501",
+            "ringPattern": "cyclic"
+        },
+        {
+            "addressNumber": "502",
+            "allowMembersEditFwd": "true",
+            "label": "ACD Group 502",
+            "ringPattern": "unisson"
+        }
+    ],
+    "acd_members": {
+        "members": [
+            {
+                "restUri": ""
+            },
+            {
+                "restUri": ""
+            },
+            {
+                "restUri": ""
+            }
+        ]
+    },
+    "payload_aa": {
+        "addressNumber": "400",
+        "ivrName": "Welcome_Attendant"
+    },
+    "barring_payload": {
+        "actionOnMatching": "rejectTheCall",
+        "applyToSMS": false,
+        "applyToVoiceCall": true,
+        "label": "CB_NOEXT",
+        "name": "CBNOEXT"
+    },
+    "enterprise_extra": {
+        "assignedTo": ""
+    },
+    "speeddials_payload": [
+        {
+            "addressNumber": "887",
+            "label": "Pizza",
+            "hiddenDirectory": false,
+            "externalDestination": "00999999900"
+        },
+        {
+            "addressNumber": "888",
+            "label": "Sushi",
+            "hiddenDirectory": false,
+            "externalDestination": "00999999901"
+        },
+        {
+            "addressNumber": "889",
+            "label": "Market",
+            "hiddenDirectory": false,
+            "externalDestination": "00999999902"
+        }
+    ],
+    "paginggroup_payload": [
+        {
+            "addressNumber": "512",
+            "active": true,
+            "canChangeRingPattern": true,
+            "label": "Lvl1 Support Paging",
+            "ringPattern": "unisson",
+            "overrideEnterpriseGroupsDisplayPolicies": true,
+            "groupDisplayedNumberPolicy": "originalCaller"
+        }
+    ],
+    "dialprefixe_payload": [
+        {
+            "userLabel": "out",
+            "prefix": "0",
+            "useEnum": true,
+            "abstractGatewayName": "CTS_GW",
+            "abstractGateway": "DIALPREFIXHtMlABSTRACTGATEWAYID",
+            "isDefaultDialPrefix": false,
+            "numberCompleteCheck": "C"
+        }
+    ],
+    "remoteterminal_payload": [
+        {
+            "label": "RT - U1",
+            "logicalIDs": [
+                "USER_MOBILE"
+            ],
+            "extension": "v1/telephony/Enterprise/15035404748890927/Extension/2450181770669383293",
+            "ringDelayed": 0,
+            "has3rdPartyVM": true,
+            "addressNumber": "221"
+        },
+        {
+            "label": "RT - U2",
+            "logicalIDs": [
+                "USER_MOBILE"
+            ],
+            "extension": "v1/telephony/Enterprise/15035404748890927/Extension/247142238992659103",
+            "ringDelayed": 0,
+            "has3rdPartyVM": true
+        },
+        {
+            "label": "RT - U3",
+            "logicalIDs": [
+                "USER_MOBILE"
+            ],
+            "extension": "v1/telephony/Enterprise/15035404748890927/Extension/2474948487929283459",
+            "ringDelayed": 0,
+            "has3rdPartyVM": true
+        }
+    ],
+    "remoteterminal_assign": [
+        {
+            "mobileNumber": "0695847414"
+        },
+        {
+            "mobileNumber": "0695847413"
+        },
+        {
+            "mobileNumber": "0695847415"
+        }
+    ],
+    "calendar_payload": [
+        {
+            "name": "Open"
+        }
+    ],
+    "calendar_assign": [
+        {
+            "calendar": "",
+            "dayOfWeek": 2,
+            "endTime": 1080,
+            "startTime": 480,
+            "type": "WeekSlot"
+        },
+        {
+            "calendar": "",
+            "dayOfWeek": 3,
+            "endTime": 1080,
+            "startTime": 480,
+            "type": "WeekSlot"
+        },
+        {
+            "calendar": "",
+            "dayOfWeek": 4,
+            "endTime": 1080,
+            "startTime": 480,
+            "type": "WeekSlot"
+        },
+        {
+            "calendar": "",
+            "dayOfWeek": 5,
+            "endTime": 1080,
+            "startTime": 480,
+            "type": "WeekSlot"
+        },
+        {
+            "calendar": "",
+            "dayOfWeek": 6,
+            "endTime": 1080,
+            "startTime": 480,
+            "type": "WeekSlot"
+        }
+    ],
+    "calendar_exceptions": [
+        {
+            "calendar": "",
+            "endDateTime": 1621699200000,
+            "startDateTime": 1621663200000,
+            "type": "AbsoluteTimeSlot"
+        },
+        {
+            "calendar": "",
+            "endDateTime": 1626364800000,
+            "startDateTime": 1626242400000,
+            "type": "AbsoluteTimeSlot"
+        },
+        {
+            "calendar": "",
+            "endDateTime": 1640538000000,
+            "startDateTime": 1640415600000,
+            "type": "AbsoluteTimeSlot"
+        }
+    ],
+    "enterprise_blocked": {
+        "activated": false
+    }
+}
